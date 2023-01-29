@@ -1,13 +1,7 @@
 <template>
   <div class="delete">
     <div class="slider">
-      <div
-        class="content"
-        @touchstart="touchStart"
-        @touchmove="touchMove"
-        @touchend="touchEnd"
-        :style="deleteSlider"
-      >
+      <div class="content" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd" :style="deleteSlider">
         <!-- 插槽中放具体项目中需要内容     -->
         <slot></slot>
       </div>
@@ -25,7 +19,7 @@ export default {
   props: {
     propE: {
       type: Object,
-      default: function () {},
+      default: function () { },
     },
   },
   data() {
