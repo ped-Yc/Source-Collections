@@ -43,7 +43,7 @@ export default {
     },
     touchStart(ev) {
       console.log(ev);
-      ev = ev || event;
+      ev = ev || window.event;
       //tounches类数组，等于1时表示此时有只有一只手指在触摸屏幕
       if (ev.touches.length == 1) {
         // 记录开始位置
@@ -51,7 +51,7 @@ export default {
       }
     },
     touchMove(ev) {
-      ev = ev || event;
+      ev = ev || window.event;
       //获取删除按钮的宽度，此宽度为滑块左滑的最大距离
       let wd = this.$refs.remove.offsetWidth;
       if (ev.touches.length == 1) {
@@ -75,7 +75,7 @@ export default {
       }
     },
     touchEnd(ev) {
-      ev = ev || event;
+      ev = ev || window.event;
       console.log(ev);
       let wd = this.$refs.remove.offsetWidth;
       if (ev.changedTouches.length == 1) {

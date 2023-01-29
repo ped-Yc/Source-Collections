@@ -1,4 +1,3 @@
-[toc]
 # ResourceCollection
 > 资源收集
 
